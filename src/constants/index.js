@@ -128,7 +128,7 @@ const technologies = [
     icon: nodejs,
   },
   {
-    name: "github",
+    name: "GitHub",
     icon: github2,
   },
 ];
@@ -169,7 +169,7 @@ const experiences = [{
       "Creación de Proyectos de Análisis de datos usando Data extraida de Kaggle y aplicando modelos de Machine Learning.",
       "Desarrollo de aplicaciones web modernas y responsivas integrando React.js con frameworks de diseño avanzado como Tailwind CSS y Material UI.",
       "Arquitectura de backends robustos y escalables con Python y FastAPI, implementando una integración fluida mediante APIs RESTful.",
-      "Desarrollando proyectos usando diversas varias bases de datos Relacionales como PostgreSQL y MySQL",
+      "Desarrollo de proyectos utilizando diversas bases de datos relacionales como PostgreSQL y MySQL.",
       "Formación de postgrado en Arquitectura de Soluciones Multicloud en UTEC, enfocado en el diseño de infraestructuras en la nube.",
       "Especialización continua en Data Engineering y Analytics mediante certificaciones internacionales en Coursera, fortaleciendo el dominio de herramientas de vanguardia."
     ],
@@ -177,21 +177,21 @@ const experiences = [{
 ];
 
 const testimonials = [{
-    testimonial: "Destacó por su proactividad, responsibilidad y comprimiso. Desde el momento en que se unió al equipo, demostró un enfoque diligente hacia sus responsabilidades laborales.",
+    testimonial: "Destacó por su proactividad, responsabilidad y compromiso. Desde el momento en que se unió al equipo, demostró un enfoque diligente hacia sus responsabilidades laborales.",
     name: "Miguel Rantes",
     designation: "IT RECRUITER",
     company: "JOY IT",
     image: miguel,
   },
   {
-    testimonial: "Se reconocé la capacidad del estudiante Antonio Guanilo para crear proyectos innovadores en el campo de la ingeniería. Su trabajo es testimonio de su talento y potencial para impulsar el cambio.",
+    testimonial: "Se reconoce la capacidad del estudiante Antonio Guanilo para crear proyectos innovadores en el campo de la ingeniería. Su trabajo es testimonio de su talento y potencial para impulsar el cambio.",
     name: "Jackeline León",
     designation: "Dir. Ingenieria",
     company: "UPN",
     image: jackeline,
   },
   {
-    testimonial: "El estudiante ha demostrado capacidad para aplicar sus conocimientos en la creación de soluciones prácticas y avanzadas, asi como habilidad para identificar y abordar necesidades del mundo real con creatividad y eficacia.",
+    testimonial: "El estudiante ha demostrado capacidad para aplicar sus conocimientos en la creación de soluciones prácticas y avanzadas, así como habilidad para identificar y abordar necesidades del mundo real con creatividad y eficacia.",
     name: "Victor Davila",
     designation: "Coord. Sistemas",
     company: "UPN",
@@ -221,7 +221,7 @@ const projects = [{
   },
   {
     name: "Web de Videos",
-    description: "Página web similar a youtube para poder subir, ordenar y reproducir videos. En la demo se muestra solo el deploy del frontend de manera sencilla pero en realidad el proyecto esta hecho para trabajar con un backend conectado por fastAPI y una base de datos",
+    description: "Página web similar a YouTube para subir, organizar y reproducir videos. La demo muestra el despliegue del frontend, diseñado para integrarse con un backend en FastAPI y base de datos.",
     tags: [{
         name: "react",
         color: "blue-text-gradient",
@@ -241,7 +241,7 @@ const projects = [{
   },
   {
     name: "Tienda Online",
-    description: "Una tienda web Online en este caso orientada a la venta de Videojuegos, compatible con dispositivos móviles y pc. En la demo solo se muestran algunos productos pero esta diseñada para ser escalable gracias a a versatilidad de React.",
+    description: "E-commerce orientado a la venta de videojuegos, compatible con dispositivos móviles y PC. Diseñada para ser escalable y modular gracias a la versatilidad de React.",
     tags: [{
         name: "react",
         color: "blue-text-gradient",
