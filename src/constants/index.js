@@ -33,6 +33,9 @@ import {
   eyncor,
   gamewebsite,
   nikewebsite,
+  olist,
+  olist2,
+  whatsapp,
   jobit,
   tripguide,
   postgresql,
@@ -220,26 +223,6 @@ const projects = [{
     github_link: "https://github.com/AntonioKeyxer/chatbot_nl/tree/main",
   },
   {
-    name: "Web de Videos",
-    description: "Página web similar a YouTube para subir, organizar y reproducir videos. La demo muestra el despliegue del frontend, diseñado para integrarse con un backend en FastAPI y base de datos.",
-    tags: [{
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "MUI5",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Python",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: ytvideos,
-    source_code_link: "https://youtube-clone-tau-ruddy.vercel.app/",
-    github_link: "https://github.com/AntonioKeyxer/YoutubeClone-Front",
-  },
-  {
     name: "Tienda Online",
     description: "E-commerce orientado a la venta de videojuegos, compatible con dispositivos móviles y PC. Diseñada para ser escalable y modular gracias a la versatilidad de React.",
     tags: [{
@@ -262,6 +245,30 @@ const projects = [{
     image: gamewebsite,
     source_code_link: "https://game-shop-lime.vercel.app/",
     github_link: "https://github.com/AntonioKeyxer/GameShop-Codigo",
+  },
+  {
+    name: "End-to-End Data Pipeline & BI Dashboard",
+    description: "Pipeline integral de datos que abarca desde la extracción y transformación (ETL) con Python, el almacenamiento escalable en PostgreSQL vía Supabase, hasta la visualización de insights estratégicos en Power BI. El proyecto analiza métricas críticas de logística, finanzas y satisfacción del cliente para optimizar la toma de decisiones.",
+    tags: [{
+        name: "Python (ETL)",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "PostgreSQL",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Power BI",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Data Engineering",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: olist,
+    source_code_link: "https://github.com/AntonioKeyxer/End-to-End-Data-Pipeline-BI-Dashboard-E-Commerce-/tree/main",
+    github_link: "https://github.com/AntonioKeyxer/End-to-End-Data-Pipeline-BI-Dashboard-E-Commerce-/tree/main",
   },
   {
     name: "Sitio Web - Nike",
@@ -322,6 +329,26 @@ const projects = [{
     image: nlp,
     source_code_link: "https://github.com/AntonioKeyxer/NLP-Proyectos/tree/main/NLP%20-%20Works",
     github_link: "https://github.com/AntonioKeyxer/NLP-Proyectos/tree/main/NLP%20-%20Works",
+  },
+  {
+    name: "Web de Videos",
+    description: "Página web similar a YouTube para subir, organizar y reproducir videos. La demo muestra el despliegue del frontend, diseñado para integrarse con un backend en FastAPI y base de datos.",
+    tags: [{
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "MUI5",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Python",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: ytvideos,
+    source_code_link: "https://youtube-clone-tau-ruddy.vercel.app/",
+    github_link: "https://github.com/AntonioKeyxer/YoutubeClone-Front",
   },
 ];
 

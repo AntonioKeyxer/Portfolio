@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
@@ -49,7 +50,6 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
                 window.open(github_link, "_blank");
               }}
               className="lightblue-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:scale-[1.2]"
-              title="Frontend"
             >
               <img src={gitblue} alt="github"
                 className="w-1/2 h-1/2 object-contain" />
@@ -75,6 +75,22 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
 }
 
 const Works = () => {
+  // Estado para la paginación
+  const [currentPage, setCurrentPage] = useState(1);
+  const projectsPerPage = 6;
+
+  // Lógica para obtener los proyectos actuales
+  const indexOfLastProject = currentPage * projectsPerPage;
+  const indexOfFirstProject = indexOfLastProject - projectsPerPage;
+  const currentProjects = projects.slice(indexOfFirstProject, indexOfLastProject);
+
+  // Lógica para el número de páginas
+  const totalPages = Math.ceil(projects.length / projectsPerPage);
+
+  // Funciones para moverse entre las páginas
+  const handlePrevPage = () => { if (currentPage > 1) setCurrentPage(currentPage - 1); };
+  const handleNextPage = () => { if (currentPage < totalPages) setCurrentPage(currentPage + 1); };
+
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -95,11 +111,60 @@ const Works = () => {
         </motion.p>
       </div>
 
-      <div className='mt-20 flex flex-wrap gap-7'>
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
+      <motion.div 
+        key={currentPage}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.25 }}
+        className='mt-20 flex flex-wrap gap-7'
+      >
+        {currentProjects.map((project, index) => (
+          <ProjectCard key={`project-${project.name}-${index}`} index={index} {...project} />
         ))}
-      </div>
+      </motion.div>
+
+      {/* Menú de Navegación de Páginas */}
+      {totalPages > 1 && (
+        <div className="mt-10 flex justify-center items-center gap-4">
+          <button
+            onClick={handlePrevPage}
+            disabled={currentPage === 1}
+            className={`w-10 h-10 rounded-full flex justify-center items-center font-bold text-[18px] transition-all duration-300 ${
+              currentPage === 1
+                ? "bg-tertiary text-secondary cursor-not-allowed"
+                : "bg-black-100 text-white hover:bg-[#915EFF]"
+            }`}
+          >
+            {"<"}
+          </button>
+
+          {Array.from({ length: totalPages }).map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentPage(index + 1)}
+              className={`w-10 h-10 rounded-full flex justify-center items-center font-bold text-[16px] transition-all duration-300 ${
+                currentPage === index + 1
+                  ? "bg-[#915EFF] text-white"
+                  : "bg-tertiary text-secondary hover:bg-black-100 hover:text-white"
+              }`}
+            >
+              {index + 1}
+            </button>
+          ))}
+
+          <button
+            onClick={handleNextPage}
+            disabled={currentPage === totalPages}
+            className={`w-10 h-10 rounded-full flex justify-center items-center font-bold text-[18px] transition-all duration-300 ${
+              currentPage === totalPages
+                ? "bg-tertiary text-secondary cursor-not-allowed"
+                : "bg-black-100 text-white hover:bg-[#915EFF]"
+            }`}
+          >
+            {">"}
+          </button>
+        </div>
+      )}
     </>
   )
 }

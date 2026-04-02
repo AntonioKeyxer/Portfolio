@@ -45,10 +45,12 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import emmabot from "./emmabot.png";
 import ytvideos from "./YT-CLONE.png";
-import gamewebsite from "./gamewebsite.png"
-import nikewebsite from "./Nike.png"
-import machinel from './machineL.png'
-import nlp from './nlp.png'
+import gamewebsite from "./gamewebsite.png";
+import nikewebsite from "./Nike.png";
+import machinel from './machineL.png';
+import nlp from './nlp.png';
+import olist from './olist.png';
+import olist2 from './olist2.png';
 
 import miguel from "./1608304105026.jpg";
 import jackeline from "./jackeline.jpg";
@@ -105,5 +107,7 @@ export {
   nikewebsite,
   machinel,
   nlp,
+  olist,
+  olist2,
   whatsapp
 };
